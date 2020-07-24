@@ -18,7 +18,7 @@ parser.add_argument('--visualizeimgs',type=int,default=0)           #if 1, will 
 parser.add_argument('--visualizebboxes',type=int,default=0)			#if 1, will store the bbox visualizations in visualizations folder
 args=parser.parse_args()
 
-filesize=max(int(args.filesize),4)
+filesize = max(int(args.filesize),4)
 visualizeimgs=False
 if(args.visualizeimgs==1):
     visualizeimgs=True

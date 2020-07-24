@@ -22,8 +22,6 @@ class Distribution:
         file=open(self.pickle_filename,'rb')
         self.all_tables_data=pickle.load(file)
         file.close()
-        return self.get_words_numbers_others()
-
 
     def store_to_pickle(self):
         file=open(self.pickle_filename,'wb')
@@ -55,7 +53,7 @@ class Distribution:
             self.all_tables_data+=[[filename,tables_counters]]
 
         self.store_to_pickle()
-        return self.all_tables_data
+        return self.get_words_numbers_others()
 
     def get_transformed_pts(self,pts1, pts2, dim, imshape):
         return (int((pts1[0] / imshape[1]) * dim[0]), int((pts1[1] / imshape[0]) * dim[1])), (
