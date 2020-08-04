@@ -171,7 +171,7 @@ class Table:
             self.col_spans_matrix[0, index+1:index+length] = -1
             row_span_indices += list(range(index,index+length))
 
-            ids = np.random.choice(n, m, replace=False)
+            ids = np.random.choice(n, m, replace=False) + 1
             self.col_spans_matrix[ids, index] = length
             self.col_spans_matrix[ids, index+1:index+length] = -1
 
